@@ -1,6 +1,8 @@
+import { ThisReceiver } from "@angular/compiler";
 import { Injectable, EventEmitter } from "@angular/core";
 
 import { LoggingService } from "./logging.service";
+
 
 
 @Injectable()
@@ -21,7 +23,7 @@ export class AccountsService {
   ];
   statusUpdated = new EventEmitter<string>();
 
-  construcor(private loggingService: LoggingService) {}
+  constructor(private loggingService: LoggingService) {}
 
   addAccount(name: string, status: string) {
     this.accounts.push({name: name, status: status});
@@ -29,5 +31,6 @@ export class AccountsService {
 
   updateStatus(id: number, status: string) {
     this.accounts[id].status = status;
+
   }
 }

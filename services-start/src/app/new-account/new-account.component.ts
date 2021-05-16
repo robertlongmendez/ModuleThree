@@ -7,7 +7,7 @@ import { LoggingService } from '../logging.service';
   selector: 'app-new-account',
   templateUrl: './new-account.component.html',
   styleUrls: ['./new-account.component.css'],
-  // providers: [LoggingService]
+  providers: [LoggingService]
 })
 export class NewAccountComponent {
 
@@ -37,6 +37,7 @@ export class NewAccountComponent {
 //  this code is no longer being listened to, and instead inject accountsService through the constructor and add it to the provider also
 
 
+//  removed when we got rid of creating the instance manually
 
 
 //  {--const service = new LoggingService();
